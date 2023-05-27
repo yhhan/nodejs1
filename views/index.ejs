@@ -1,0 +1,16 @@
+<h1>EJS</h1>
+<table>
+  <% for(i=0; i < list.length; i++) { %>
+    <tr>
+      <td>
+        <%=i+1 %>
+      </td>
+      <td>
+        <%=list[i].id %>
+      </td>
+      <td>
+        <%=list[i].name %>
+      </td>
+    </tr>
+    <% } %>
+</table>
