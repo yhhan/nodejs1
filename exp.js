@@ -1,19 +1,19 @@
-
-const express = require('express');
-const bodyParser = require('body-parser');
-const res = require('express/lib/response');
+const express = require("express");
+const bodyParser = require("body-parser");
+const res = require("express/lib/response");
 const app = express();
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.get('/', (req,res) =>{
-    res.json({message: 'Hello!!'});
+app.get("/", (req, res) => {
+  res.json({ message: "Hello!!" });
 });
 
-console.log('Server is starting..');
+console.log("Server is starting..");
+console.log("333");
 
 const port = process.env.PORT || 8000;
-app.listen(port, ()=>{
-    console.log(`Server is running on port ${port}.`);
-}); 
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}.`);
+});
 
