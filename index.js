@@ -20,10 +20,13 @@ app.get("/list", function (req, res) {
   conn.query(sql, function (err, rows, fields) {
     if (err) console.log("query is not excuted. select fail...\n" + err);
     else {
-      res.render("index.ejs", { list: rows });
-      // res.send({ list: rows });
+      res.send({ list: rows });
+      // res.json({ list: rows });
+      // res.render("index.ejs", { list: rows });
     }
   });
 });
 
-app.listen(8000, () => console.log("포트 3000번에서 시작"));
+
+const PORT = 8000;
+app.listen(PORT, () => console.log(`포트 ${PORT}번에서 시작`));
