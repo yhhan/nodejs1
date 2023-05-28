@@ -10,6 +10,7 @@ async function main() {
   const $ = cheerio.load(resp.data);
   //   const elements = $(".slide p");
   const elements = $("div h2");
+  console.log('test');
 
   elements.each((idx, el) => {
     console.log($(el).text());
